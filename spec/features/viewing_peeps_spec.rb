@@ -1,6 +1,6 @@
-feature 'Viewing peeps' do
+feature 'Viewing Peeps' do
     scenario 'visiting the index page' do
-      visit('/')
-      expect(page).to have_content "Welcome to Chitter"
+      visit('/peeps')
+      expect(page).to have_content "This is my first peep"
     end
   end
