@@ -14,6 +14,10 @@ class ChitterChallenge < Sinatra::Base
         
     end
 
+    get '/peeps/new' do
+        erb :peeps_new 
+    end
+
     
   
     run! if app_file == $0
