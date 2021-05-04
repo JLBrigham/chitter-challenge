@@ -11,7 +11,7 @@ class ChitterChallenge < Sinatra::Base
     end
 
     get '/peeps' do
-        'This is my first peep'
+        
     end
 
     
