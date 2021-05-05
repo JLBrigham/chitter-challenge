@@ -13,6 +13,8 @@ class ChitterChallenge < Sinatra::Base
 
     post '/peeps/new' do
         p params
+        Peeps.create(name: params[:name], username: params[:username], peep: params[:peep])
+        redirect '/'
     end
 
    
