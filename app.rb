@@ -7,16 +7,15 @@ class ChitterChallenge < Sinatra::Base
     end
   
     get '/' do
-      'Welcome to Chitter'
+      erb :index
     end
 
-    get '/peeps' do
-        
+
+    post '/peeps/new' do
+        p params
     end
 
-    get '/peeps/new' do
-        erb :peeps_new 
-    end
+   
 
     
   
