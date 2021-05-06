@@ -5,7 +5,7 @@ class ChitterChallenge < Sinatra::Base
 enable :sessions, :method_override
   
     get '/' do
-      @peeps = Peeps.all
+      @peeps = Peeps.all.reverse
       erb :index
       
     end
