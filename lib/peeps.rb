@@ -50,7 +50,7 @@ class Peeps
           connection = PG.connect(dbname: 'chitter')
         end
     result = connection.exec("UPDATE peeps SET peep = '#{peep}' WHERE id = #{id} RETURNING id, name, username, peep, time;")
-    Peeps.new(id: result[0]['id'], name: result[0]['t'], username: result[0]['username'], peep: result[0]['peep'], time: result[0]['time'])
+    Peeps.new(id: result[0]['id'], name: result[0]['name'], username: result[0]['username'], peep: result[0]['peep'], time: result[0]['time'])
 
       end
 
