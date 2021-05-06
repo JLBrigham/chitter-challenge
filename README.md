@@ -20,6 +20,9 @@ This is my attempt at the Chitter Challenge set by Makers
 -Connect to the database using the pqsl command \c chitter_test;
 -Run the query we have saved in the file 01_create_peeps_table.sql
 
+## Approach
+
+So as to get some more practice making a fully CRUD app I decided to add update and delete functions to peeps
 
 Features:
 -------
