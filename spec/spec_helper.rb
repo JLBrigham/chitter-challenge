@@ -1,4 +1,4 @@
-ENV['RACK_ENV'] = 'test'
+#ENV['RACK_ENV'] = 'test'
 ENV['ENVIRONMENT'] = 'test'
 # Set the environment to "test"
 
@@ -13,8 +13,7 @@ require 'simplecov'
 require 'simplecov-console'
 require_relative './setup_test_database'
 
-# Tell Capybara to talk to ChitterChallenge
-Capybara.app = ChitterChallenge
+
 
 
 RSpec.configure do |config|
@@ -24,8 +23,8 @@ config.before(:each) do
 end
 end
 
-
-
+# Tell Capybara to talk to ChitterChallenge
+Capybara.app = ChitterChallenge
 
 
 
