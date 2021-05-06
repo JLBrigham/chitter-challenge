@@ -8,7 +8,7 @@ class Peeps
         @name = name
         @username = username
         @peep = peep
-        @time = time
+        @time = time[0...16]
     end
 
 
