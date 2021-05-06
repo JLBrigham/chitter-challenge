@@ -10,8 +10,12 @@
 
 <ul> 
 <% @peeps.each do |peep| %>
-    <li>
+    <li class="peep" id="peep-<%= peep.id %>">
     <%= peep.name %> <%= peep.username %> "<%= peep.peep%>" <%= peep.time %>
+    <form action="/<%= peep.id %>" method="post">
+    <input type='hidden' name='_method' value='DELETE' />
+    <input type='submit' value='Delete' />
+    </form>
     </li>
     <% end %>
     </ul>

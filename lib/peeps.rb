@@ -35,4 +35,13 @@ class Peeps
         Peeps.new(id: result[0]['id'], name: result[0]['name'], username: result[0]['username'], peep: result[0]['peep'], time: result[0]['time'])
       end
 
+      def self.delete(id:)
+        if ENV['Environment'] = 'test'
+            connection = PG.connect(dbname: 'new_chitter_test')
+            else
+            connection = PG.connect(dbname: 'chitter')
+            end
+            connection.exec("DELETE FROM peeps WHERE id = #{id}")
+        end
+
 end

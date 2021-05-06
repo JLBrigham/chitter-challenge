@@ -4,7 +4,7 @@ feature 'Deleting a bookmark' do
         visit('/')
         expect(page).to have_content('I love tennis balls')
 
-        first('.peeps').click_button 'Delete'
+        first('.peep').click_button 'Delete'
 
         expect(current_path).to eq '/'
         expect(page).not_to have_content('I love tennis balls')

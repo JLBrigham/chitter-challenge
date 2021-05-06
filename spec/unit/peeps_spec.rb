@@ -35,5 +35,16 @@ describe '.all' do
     expect(peep.username).to eq 'Normsta'
     expect(peep.peep).to eq 'I love tennis balls'
     end
-end
+  end
+
+  describe '.delete' do
+    it 'deletes a peep' do
+        peep = Peeps.create(name: 'Norman', username: 'Normsta', peep: 'I love tennis balls')
+
+        Peeps.delete(id: peep.id)
+    
+        expect(Peeps.all.length).to eq 0
+    end
+  end
+
 end
