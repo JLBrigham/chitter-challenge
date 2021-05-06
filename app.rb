@@ -24,7 +24,17 @@ enable :sessions, :method_override
     redirect '/'
    end
 
-    
+   get '/:id/edit' do
+    p params
+    @peep_id = params[:id]
+    erb :edit
+   end
+
+    patch '/:id' do
+      Peeps.update(id: params[:id], name: params[:name], username: params[:username], peep: params[:peep])
+     
+      redirect('/')
+    end
   
     run! if app_file == $0
   end

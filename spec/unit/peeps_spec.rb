@@ -47,4 +47,16 @@ describe '.all' do
     end
   end
 
+  describe '.update' do
+    it 'updates a peep' do
+        peep = Peeps.create(name: 'Norman', username: 'Normsta', peep: 'I love tennis balls')
+        updated_peep = Peeps.update(id: peep.id, name: peep.name, username: peep.username, peep: 'I really really love sticks')
+
+        expect(updated_peep).to be_a Peeps
+    expect(updated_peep.id).to eq peep.id
+    expect(updated_peep.name).to eq 'Norman'
+    expect(updated_peep.peep).to eq 'I really really love sticks'
+    end
+end
+
 end
