@@ -1,24 +1,39 @@
 require 'peeps'
+require 'pg'
 
-
+describe Peeps do
 describe '.all' do
     it 'returns a list of peeps' do
-      connection = PG.connect(dbname: 'chitter_test')
-
-      connection.exec("INSERT INTO peeps (name, username, peep) VALUES ('Joanna', 'jojobrigs', 'This is my first peep');")
+    
+      Peeps.create(name: 'Norman', username: 'Normsta', peep: 'I love tennis balls')
+      Peeps.create(name: 'Ronnie', username: 'Ron John Silver', peep: 'Im teeny tiny')
 
 
       peeps = Peeps.all
+
+      p peeps
   
-      expect(peeps).to include "This is my first peep"
+      expect(peeps.length).to eq 2
+      expect(peeps.first.name).to eq 'Norman'
+      expect(peeps.first.username).to eq 'Normsta'
+      expect(peeps.first.peep).to eq 'I love tennis balls'
+      
 
     end
   end
 
   describe '.create' do
     it 'creates a new peep' do
-        Peeps.create(name: 'Joanna', username: 'jojobrigs', peep: 'Peep, Peep, Peep')
+        peeps = Peeps.create(name: 'Norman', username: 'Normsta', peep: 'I love tennis balls')
+        print peeps
+        #persisted_data = PG.connect(dbname: 'new_chitter_test').query("SELECT * FROM peeps WHERE id = #{peep.id};")
+        #print persisted_data
 
-    expect(Peeps.all).to include 'Peep, Peep, Peep'
+    #expect(peep).to be_a Peeps
+    #expect(peep.id).to eq persisted_data.first['id']
+    expect(peeps.name).to eq 'Norman'
+    expect(peeps.username).to eq 'Normsta'
+    expect(peeps.peep).to eq 'I love tennis balls'
     end
+end
 end

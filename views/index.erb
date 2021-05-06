@@ -7,3 +7,11 @@
 <input type="text" name="peep" placeholder="Add your Peep here" />
 <input type="submit" value="Add Peep" />
 </form>
+
+<ul> 
+<% @peeps.each do |peep| %>
+    <li>
+    <%= peep.name %> <%= peep.username %> "<%= peep.peep%>" <%= peep.time %>
+    </li>
+    <% end %>
+    </ul>

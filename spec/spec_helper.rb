@@ -1,13 +1,7 @@
-require_relative './setup_test_database'
+ENV['RACK_ENV'] = 'test'
 ENV['ENVIRONMENT'] = 'test'
 # Set the environment to "test"
-RSpec.configure do |config|
-  config.before(:each) do
-    setup_test_database
-  end
-end
 
-ENV['RACK_ENV'] = 'test'
 
 # Bring in the contents of the `app.rb` file. The below is equivalent to: require_relative '../app.rb'
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
@@ -15,15 +9,28 @@ require File.join(File.dirname(__FILE__), '..', 'app.rb')
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
-require 'pg'
+require 'simplecov'
+require 'simplecov-console'
+require_relative './setup_test_database'
 
-# Tell Capybara to talk to BookmarkManager
+# Tell Capybara to talk to ChitterChallenge
 Capybara.app = ChitterChallenge
 
 
+RSpec.configure do |config|
 
-require 'simplecov'
-require 'simplecov-console'
+config.before(:each) do
+  setup_test_database
+end
+end
+
+
+
+
+
+
+
+
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::Console,
