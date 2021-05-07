@@ -1,4 +1,5 @@
 require 'database_helpers'
+require 'user'
 
 describe User do
     describe '.create' do
@@ -8,7 +9,7 @@ describe User do
             persisted_data = persisted_data(id: user.id, table: :users)
 
             expect(user).to be_a User
-            expect(user.id). to eq persisted_data.first['id']
+            expect(user.id). to eq persisted_data['id']
             expect(user.name).to eq 'Joanna'
             expect(user.username).to eq 'jojobrigs'
             expect(user.email).to eq 'test@test.com'
