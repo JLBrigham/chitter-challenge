@@ -33,7 +33,16 @@ class ChitterChallenge < Sinatra::Base
   patch '/:id' do
     Peeps.update(id: params[:id], name: params[:name], username: params[:username], peep: params[:peep])
    
-    redirect('/')
+    redirect '/'
+  end
+
+  get '/users/new' do
+    erb :users_new
+  end
+
+  post '/users' do
+    #creates the user
+    redirect '/'
   end
   
   run! if app_file == $0
