@@ -6,13 +6,14 @@ class ChitterChallenge < Sinatra::Base
   enable :sessions, :method_override
   
   get '/' do
+    # @user = User.find(session[:user_id])
     @peeps = Peeps.all.reverse
     erb :index
     
   end
 
   post '/peeps/new' do
-    p params
+    
     Peeps.create(name: params[:name], username: params[:username], peep: params[:peep])
     redirect '/'
   end
@@ -41,7 +42,7 @@ class ChitterChallenge < Sinatra::Base
   end
 
   post '/users' do
-    User.create(name: params[:name], username: params[:username], email: params[:email], password: params[:password])
+    user = User.create(name: params[:name], username: params[:username], email: params[:email], password: params[:password])
     redirect '/'
   end
   
