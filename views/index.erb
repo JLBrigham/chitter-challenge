@@ -1,5 +1,6 @@
 <% if @username != nil%>
 <h1>Welcome to Chitter <%= @username %> </h1>
+<a href="/sessions/destroy">Sign Out</a>
 <% else %>
 <h1> Welcome to Chitter </h1>
 <a href="/users/new">Sign Up</a>

@@ -16,7 +16,6 @@ class ChitterChallenge < Sinatra::Base
   end
 
   post '/peeps/new' do
-    
     Peeps.create(name: params[:name], username: params[:username], peep: params[:peep])
     redirect '/'
   end
@@ -65,6 +64,16 @@ class ChitterChallenge < Sinatra::Base
       flash[:notice] = 'Please check your username or password'
       redirect('/sessions/new')
     end
+
+    p params
+    
+  end
+
+  get '/sessions/destroy' do
+    session.clear
+    flash[:notice] = "You are now logged out, goodbye!"
+    redirect('/')
+    p session[:name]
   end
    
   run! if app_file == $0
