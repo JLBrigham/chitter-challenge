@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'pg'
 gem 'sinatra'
 gem 'sinatra-contrib'
+gem 'sinatra-flash', '~> 0.3.0'
 
 group :test do
   gem 'capybara'

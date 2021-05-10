@@ -1,12 +1,15 @@
 require 'sinatra/base'
 require_relative './lib/peeps'
+require 'sinatra/flash'
 require './database_connection_setup'
+require_relative './lib/user'
 
 class ChitterChallenge < Sinatra::Base
   enable :sessions, :method_override
+  register Sinatra::Flash
   
   get '/' do
-    # @user = User.find(session[:user_id])
+    @username = session[:username]
     @peeps = Peeps.all.reverse
     erb :index
     
@@ -45,6 +48,24 @@ class ChitterChallenge < Sinatra::Base
     user = User.create(name: params[:name], username: params[:username], email: params[:email], password: params[:password])
     redirect '/'
   end
-  
+
+  get '/sessions/new' do
+    erb :sign_in
+  end
+
+  post '/sessions' do
+    user = User.authenticate(username: params[:username], password: params[:password])
+
+    if user
+      session[:username] = user.username
+      session[:name] = user.name
+      session[:id] = user.id
+      redirect('/')
+    else
+      flash[:notice] = 'Please check your username or password'
+      redirect('/sessions/new')
+    end
+  end
+   
   run! if app_file == $0
   end

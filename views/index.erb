@@ -1,10 +1,12 @@
-<% if @user %>
-<h1> Welcome to Chitter, <%= @user.username %> </h1>
+<% if @username != nil%>
+<h1>Welcome to Chitter <%= @username %> </h1>
 <% else %>
 <h1> Welcome to Chitter </h1>
+<a href="/users/new">Sign Up</a>
+<a href="/sessions/new">Sign In</a>
 <% end %>
 
-<a href="/users/new">Sign Up</a>
+
 
 <form action="/peeps/new" method="post">
 <input type="text" name="name" placeholder="name" />
