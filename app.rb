@@ -16,14 +16,12 @@ class ChitterChallenge < Sinatra::Base
   end
 
   post '/peeps/new' do
-    Peeps.create(name: params[:name], username: params[:username], peep: params[:peep])
+    peep = Peeps.create(name: session[:name], username: session[:username], peep: params[:peep])
     redirect '/'
   end
 
   delete '/:id' do
-    p params
-    connection = PG.connect(dbname: 'new_chitter_test')
-    connection.exec("DELETE FROM peeps WHERE id = #{params['id']}")
+    peep = Peeps.delete(id: params[:id])
     redirect '/'
   end
 
@@ -57,16 +55,12 @@ class ChitterChallenge < Sinatra::Base
 
     if user
       session[:username] = user.username
-      session[:name] = user.name
       session[:id] = user.id
       redirect('/')
     else
       flash[:notice] = 'Please check your username or password'
       redirect('/sessions/new')
     end
-
-    p params
-    
   end
 
   get '/sessions/destroy' do

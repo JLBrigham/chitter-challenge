@@ -1,6 +1,10 @@
 <% if @username != nil%>
 <h1>Welcome to Chitter <%= @username %> </h1>
 <a href="/sessions/destroy">Sign Out</a>
+<form action="/peeps/new" method="post">
+<input type="text" name="peep" placeholder="Add your Peep here" />
+<input type="submit" value="Add Peep" />
+</form>
 <% else %>
 <h1> Welcome to Chitter </h1>
 <a href="/users/new">Sign Up</a>
@@ -9,12 +13,6 @@
 
 
 
-<form action="/peeps/new" method="post">
-<input type="text" name="name" placeholder="name" />
-<input type="text" name="username" placeholder="username" />
-<input type="text" name="peep" placeholder="Add your Peep here" />
-<input type="submit" value="Add Peep" />
-</form>
 
 <ul> 
 <% @peeps.each do |peep| %>
