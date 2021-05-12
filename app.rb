@@ -63,11 +63,10 @@ class ChitterChallenge < Sinatra::Base
     end
   end
 
-  get '/sessions/destroy' do
+  post '/sessions/destroy' do
     session.clear
     flash[:notice] = "You are now logged out, goodbye!"
     redirect('/')
-    p session[:name]
   end
    
   run! if app_file == $0

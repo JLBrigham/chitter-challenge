@@ -31,6 +31,17 @@ feature 'user authentication' do
         expect(page).to have_content 'Please check your username or password'
     end
 
+    scenario 'a signed in user can sign out' do
+        sign_up_and_sign_in
+
+        click_button('Sign Out')
+
+        expect(page).not_to have_content 'Welcome to Chitter jojobrigs'
+        expect(page).to have_content 'You are now logged out, goodbye!'
+        expect(page).to have_link('Sign In')
+        expect(page).to have_link('Sign Up')
+    end
+
 end
 
 
