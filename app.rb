@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require 'sinatra/reloader'
 require_relative './lib/peeps'
 require 'sinatra/flash'
 require './database_connection_setup'
