@@ -1,0 +1,12 @@
+* {
+  background-image: url('./images/white_terazzo.webp');  
+}
+
+.index {
+    color: pink;
+    text-align: center;
+}
+
+.index-box {
+    border-color: black;
+}
