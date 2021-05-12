@@ -24,9 +24,9 @@ describe User do
     #add a before each here
 
     describe '.authenticate' do
-        it 'signs in a user if username exists' do
+        it 'returns a user when given the correct username and password if one exists' do
             user = User.create(name: 'Joanna', username: 'jojobrigs', email: 'test@test.com', password: 'password123')
-            authenticated_user = User.authenticate(username: "jojobrigs", password: 'cabbage')
+            authenticated_user = User.authenticate(username: 'jojobrigs', password: 'password123')
 
             expect(authenticated_user.id).to eq user.id
         end
@@ -36,6 +36,13 @@ describe User do
 
             expect(User.authenticate(username: 'notmyusername', password: 'password123')).to be_nil
         end
+
+        it 'returns nil given an incorrect password' do
+            user = User.create(name: 'Joanna', username: 'jojobrigs', email: 'test@test.com', password: 'password123')
+            
+            expect(User.authenticate(username: 'jojobrigs', password: 'notmypassword')).to be_nil
+        end
+
     end
 
 
