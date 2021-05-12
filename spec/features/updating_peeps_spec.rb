@@ -1,7 +1,7 @@
 feature 'Updating a peep' do
-  scenario 'A user can update a peep' do
-    peep = Peeps.create(name: 'Norman', username: 'Normsta', peep: 'I love tennis balls')
-    sign_up_and_sign_in
+  scenario 'a user can update their own peep' do
+    peep = Peeps.create(name: 'Norman', username: 'normsta', peep: 'I love tennis balls')
+    sign_up_and_sign_in_as_norman
     expect(page).to have_content('I love tennis balls')
 
     first('.peep').click_button 'Edit'
@@ -13,6 +13,16 @@ feature 'Updating a peep' do
     expect(current_path).to eq '/'
     expect(page).not_to have_content('I love tennis balls')
     expect(page).to have_content('I really really love sticks')
-
   end
+
+  scenario 'a user cannot update a peep posted by another user' do
+    Peeps.create(name: 'Norman', username: 'normsta', peep: 'I love tennis balls')
+    sign_up_and_sign_in
+
+    expect(page).to have_content('I love tennis balls')
+    expect(page).not_to have_button('Update')
+end
+
+
+
 end

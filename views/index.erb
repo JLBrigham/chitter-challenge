@@ -20,6 +20,7 @@
 <% @peeps.each do |peep| %>
     <li class="peep" id="peep-<%= peep.id %>">
     <%= peep.name %> <%= peep.username %> "<%= peep.peep%>" <%= peep.time %>
+    <% if peep.username == @username %>
     <form action="/<%= peep.id %>" method="post">
     <input type='hidden' name='_method' value='DELETE' />
     <input type='submit' value='Delete' />
@@ -27,6 +28,7 @@
     <form action="/<%= peep.id%>/edit" method="get">
     <input type="submit" value="Edit" />
     </form>
+    <% end %>
     </li>
     <% end %>
     </ul>
