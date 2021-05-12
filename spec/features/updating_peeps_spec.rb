@@ -1,7 +1,7 @@
 feature 'Updating a peep' do
   scenario 'A user can update a peep' do
     peep = Peeps.create(name: 'Norman', username: 'Normsta', peep: 'I love tennis balls')
-    visit('/')
+    sign_up_and_sign_in
     expect(page).to have_content('I love tennis balls')
 
     first('.peep').click_button 'Edit'

@@ -15,14 +15,6 @@
 <input type="text" name="peep" placeholder="Add your Peep here" />
 <input type="submit" value="Add Peep" />
 </form>
-<% else %>
-<h1> Welcome to Chitter </h1>
-<a href="/users/new">Sign Up</a>
-<a href="/sessions/new">Sign In</a>
-<% end %>
-
-
-
 
 <ul> 
 <% @peeps.each do |peep| %>
@@ -38,3 +30,13 @@
     </li>
     <% end %>
     </ul>
+
+<% else %>
+<h1> Welcome to Chitter </h1>
+<a href="/users/new">Sign Up</a>
+<a href="/sessions/new">Sign In</a>
+<% end %>
+
+
+
+
