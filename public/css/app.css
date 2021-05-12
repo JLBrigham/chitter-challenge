@@ -1,6 +1,6 @@
-* {
+/* * {
   background-image: url('./images/white_terazzo.webp');  
-}
+} */
 
 .index {
     color: pink;
@@ -8,5 +8,15 @@
 }
 
 .index-box {
-    border-color: black;
+    background-image: url('./images/white_terazzo.webp');
+    height: 100%;
+    width: 100%; 
+    margin-top: 0px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px; 
+    outline: none;
+    border: 0px;
 }
