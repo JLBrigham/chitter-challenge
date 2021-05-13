@@ -1,11 +1,12 @@
-/* * {
-  background-image: url('./images/white_terazzo.webp');  
-} */
-
-.index {
-    color: pink;
+.title {
+    color: #889eb0;
     text-align: center;
+    font-family: 'Codystar', cursive;
+    font-size: 100px;
+    
 }
+
+/* font-family: 'Advent Pro', sans-serif; */
 
 .index-box {
     background-image: url('./images/white_terazzo.webp');
@@ -17,10 +18,20 @@
 
 .welcome-text-box {
     position: absolute;
-    background-color: rgb(250, 244, 244);
-    margin-left: 300px;
+    background-color: #f1f1ef;
+    margin-left: 450px;
     margin-right: 300px;
-    margin-top: 300px;
+    margin-top: 100px;
+    margin-bottom: 300px;
+    padding-top: 200px;
+    padding-right: 400px;
+    border-radius: 8%;
+    
+   
+}
+
+.button {
+
 }
 
 body {

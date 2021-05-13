@@ -1,5 +1,4 @@
 require 'sinatra/base'
-require 'sinatra/reloader'
 require_relative './lib/peeps'
 require 'sinatra/flash'
 require './database_connection_setup'
@@ -8,6 +7,8 @@ require_relative './lib/user'
 class ChitterChallenge < Sinatra::Base
   enable :sessions, :method_override
   register Sinatra::Flash
+  
+  
   
   get '/' do
     @username = session[:username]
