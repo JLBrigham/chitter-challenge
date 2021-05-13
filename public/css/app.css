@@ -17,14 +17,30 @@
     
 }
 
-.welcome-text-box {
+.sign-up-title {
+    font-family: 'Advent Pro', sans-serif;
+    color: #889eb0;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 50px;
+}
+
+.registration-box {
     position: relative;
     top: 100px;
-    left: 410px;
+    left: 390px;
     height: 500px;
     width: 600px;
     border-radius: 8%;
     background-color: #f1f1ef;
+}
+
+.submit-button {
+    background-color:  #f1f1ef;
+    border: none;
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 50px;
+    color: #889eb0;
 }
 
 .sign-in-button {
@@ -36,7 +52,11 @@
     font-family: 'Advent Pro', sans-serif;
     font-size: 50px;
     color: #889eb0;
+}
 
+.submit-button:hover {
+    background-color: #d9bfb8;
+    border-radius: 5%;
 }
 
 .sign-up-button {
