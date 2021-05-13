@@ -2,7 +2,8 @@
     color: #889eb0;
     text-align: center;
     font-family: 'Codystar', cursive;
-    font-size: 100px;
+    font-size: 110px;
+    padding-top: 50px;
     
 }
 
@@ -17,20 +18,55 @@
 }
 
 .welcome-text-box {
-    position: absolute;
-    background-color: #f1f1ef;
-    margin-left: 450px;
-    margin-right: 300px;
-    margin-top: 100px;
-    margin-bottom: 300px;
-    padding-top: 200px;
-    padding-right: 400px;
+    position: relative;
+    top: 100px;
+    left: 430px;
+    height: 500px;
+    width: 600px;
     border-radius: 8%;
-    
-   
+    background-color: #f1f1ef;
 }
 
-.button {
+.sign-in-button {
+    position: relative;
+    bottom: 100px;
+    left: 100px;
+    background-color:  #f1f1ef;
+    border: none;
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 50px;
+    color: #889eb0;
+
+}
+
+.sign-up-button {
+    position: relative;
+    left: 330px;
+    bottom: 20px;
+    background-color: #f1f1ef;;
+    border: none;
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 50px;
+    color: #889eb0;
+}
+
+.sign-in-button:hover {
+    background-color: #d9bfb8;
+    border-radius: 5%;
+}
+
+.sign-up-button:hover {
+    background-color: #d9bfb8;
+    border-radius: 5%;
+}
+
+.opening-text {
+    font-family: 'Advent Pro', sans-serif;
+    text-align: center;
+    color: #889eb0;
+    font-size: 30px;
+    position: relative;
+    bottom: 45px;
 
 }
 
