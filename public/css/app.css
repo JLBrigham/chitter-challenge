@@ -83,6 +83,33 @@
     color: #889eb0;
 }
 
+.sign-in-input {
+    border: none; 
+    outline: none;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 5px;
+    position: relative;
+    left: 225px;
+}
+
+.start-session-button {
+    background-color:  #f1f1ef;
+    border: none;
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 50px;
+    color: #889eb0;
+    position: relative;
+    top: 100px;
+    left: 20px;
+}
+
+.start-session-button:hover {
+    background-color: #d9bfb8;
+    border-radius: 5%;
+    color: #889eb0;
+}
+
 .sign-up-button {
     position: relative;
     left: 330px;

@@ -1,11 +1,21 @@
-<% if flash[:notice] %>
-<h2>
+<body>
+
+<div class="index-box">
+<% if %>
+<p>
 <%= flash[:notice] %>
-</h2>
+</p>
 <% end %>
+<div class="registration-box">
+<h1 class="title-on-sign-up"> Chitter </h1>
+<h2 class="create-account-header"> Sign in to get peeping</h2>
 
 <form action="/sessions" method="post">
-<input type="text" name="username" placeholder="username"/>
-<input type="text" name="password" placeholder="password" />
-<input type="submit" value="Get Peeping" />
+<input class="sign-in-input" type="text" name="username" placeholder="username"/>
+<br/>
+<input class="sign-in-input" type="text" name="password" placeholder="password" />
+<input class="start-session-button" type="submit" value="Get Peeping" />
 </form>
+</div>
+</div>
+</body>
