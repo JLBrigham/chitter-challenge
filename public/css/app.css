@@ -7,7 +7,26 @@
     
 }
 
+.title-on-sign-up {
+    color: #889eb0;
+    text-align: center;
+    font-family: 'Codystar', cursive;
+    font-size: 110px;
+    padding-top: 50px;
+    margin-bottom: 20px;
+}
 /* font-family: 'Advent Pro', sans-serif; */
+
+.sign-up-input {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 5px;
+    margin: 5px;
+    position: relative;
+    left: 130px;
+    border: none; 
+    outline: none;
+}
 
 .index-box {
     background-image: url('./images/white_terazzo.webp');
@@ -17,12 +36,12 @@
     
 }
 
-.sign-up-title {
+.create-account-header {
     font-family: 'Advent Pro', sans-serif;
     color: #889eb0;
     text-align: center;
-    padding-top: 20px;
-    font-size: 50px;
+    margin-top: 10px;
+    font-size: 30px;
 }
 
 .registration-box {
@@ -36,11 +55,15 @@
 }
 
 .submit-button {
-    background-color:  #f1f1ef;
+    background-color:   #d9bfb8;
     border: none;
     font-family: 'Advent Pro', sans-serif;
     font-size: 50px;
-    color: #889eb0;
+    /* color: #889eb0; */
+    color: #f1f1ef;
+    position: relative;
+    left: 320px;
+    bottom: 140px;
 }
 
 .sign-in-button {
@@ -57,6 +80,7 @@
 .submit-button:hover {
     background-color: #d9bfb8;
     border-radius: 5%;
+    color: #889eb0;
 }
 
 .sign-up-button {
