@@ -1,7 +1,40 @@
 Chitter Challenge
 =================
 
-This is my attempt at the Chitter Challenge set by Makers
+This is my version of Chitter Challenge set by Makers. Please see the brief from Makers [here](#Features).
+
+# Getting Started
+
+## Initial set up
+
+- You will need Ruby installed, this project uses version 2.7.2
+- Clone this repository to your local machine and navigate to the root of the project
+
+`$ git@github.com:JLBrigham/chitter-challenge.git`
+`$ cd chitter-challenge`
+
+- Run bundle to install the gems, if you do not already have bundler installed you will need to install this first
+
+`$ gem install bundler`
+`$ bundle`
+
+### Setting up the databases
+
+- This app uses a PostgreSQL database, so you will need to install and set up Postgres:
+
+  * Using a package manager such as Homebrew is recommended
+  * You can install Homebrew [here](https://brew.sh/)
+  * Then install PostgreSQL with: `$ brew install postgresql`
+  * After Homebrew has downloaded PostgreSQL it will show you some installation instructions: follow them!
+  * Next run: `$ brew services start postgresql` to keep PostgreSQL running in the background
+
+- Connect to PostgreSQL using the command `$ psql`
+- Create the test database using the psql command `CREATE DATABASE new_chitter_test`
+- Connect to the database using the psql command `\c new_chitter_test`
+- Run the queries that are saved in this [file] (chitter-challenge/db/migrations/02_create_peeps_test_table.sql)
+
+
+
 
 
 ### How to set up databases
@@ -22,9 +55,9 @@ This is my attempt at the Chitter Challenge set by Makers
 
 ## Approach
 
-So as to get some more practice making a fully CRUD app I decided to add update and delete functions to peeps
+So as to get some more practice making a fully CRUD app I decided to add update and delete functions to peeps. 
 
-Features:
+# Features:
 -------
 
 ```
@@ -63,24 +96,7 @@ So that I can stay constantly tapped in to the shouty box of Chitter
 I want to receive an email if I am tagged in a Peep
 ```
 
-Technical Approach:
------
 
-In this unit, you integrated a database into Bookmark Manager using the `PG` gem and `SQL` queries. You can continue to use this approach when building Chitter Challenge.
-
-If you'd like more technical challenge now, try using an [Object Relational Mapper](https://en.wikipedia.org/wiki/Object-relational_mapping) as the database interface.
-
-Some useful resources:
-**DataMapper**
-- [Datamapper wiki](https://en.wikipedia.org/wiki/DataMapper)
-- [Sinatra, PostgreSQL & DataMapper recipe](https://github.com/sinatra/sinatra-recipes/blob/master/databases/postgresql-datamapper.md)
-
-**Ruby Object Mapper**
-- [ROM](https://rom-rb.org/)
-
-**ActiveRecord**
-- [ActiveRecord ORM](https://guides.rubyonrails.org/active_record_basics.html)
-- [Sinatra, PostgreSQL & ActiveRecord recipe](http://recipes.sinatrarb.com/p/databases/postgresql-activerecord?#article)
 
 Notes on functionality:
 ------
