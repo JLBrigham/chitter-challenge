@@ -10,15 +10,19 @@ This is my version of Chitter Challenge set by Makers. Please see the brief from
 - You will need Ruby installed, this project uses version 2.7.2
 - Clone this repository to your local machine and navigate to the root of the project
 
-`$ git@github.com:JLBrigham/chitter-challenge.git`
-`$ cd chitter-challenge`
+```
+$ git@github.com:JLBrigham/chitter-challenge.git
+$ cd chitter-challenge
+```
 
 - Run bundle to install the gems, if you do not already have bundler installed you will need to install this first
 
-`$ gem install bundler`
-`$ bundle`
+```
+$ gem install bundler
+$ bundle
+```
 
-### Setting up the databases
+## Setting up the databases
 
 - This app uses a PostgreSQL database, so you will need to install and set up Postgres:
 
@@ -31,31 +35,37 @@ This is my version of Chitter Challenge set by Makers. Please see the brief from
 - Connect to PostgreSQL using the command `$ psql`
 - Create the test database using the psql command `CREATE DATABASE new_chitter_test`
 - Connect to the database using the psql command `\c new_chitter_test`
-- Run the queries that are saved in this [file] (chitter-challenge/db/migrations/02_create_peeps_test_table.sql)
+- Run the queries that are saved in the files *chitter-challenge/db/migrations/02_create_peeps_test_table.sql)* and *chitter-challenge/db/migrations/04_create_users_test_table.sql*
+- Create the development database using the psql command `CREATE DATABASE chitter`
+- Connect to the database using the psql command `\c chitter`
+- Run the queries that are saved in the files *chitter-challenge/db/migrations/01_create_peeps_test_table.sql)* and *chitter-challenge/db/migrations/03_create_users_test_table.sql*
 
 
+## Running tests
 
+- Ensure you are in the root directory of the project
+- To run entire test suite run the command `$ rspec`
 
+Notes on tests:
 
-### How to set up databases
+- Capybara is used for feature testing and rspec is used for unit testing
+- The tests are configured to automatically connect to the test database before running
+- The test database is cleared after each test
 
--Connect to psql
--Create the database using the psql command CREATE DATABASE chitter;
--Connect to the database using the pqsl command \c chitter;
--Run the query we have saved in the file 01_create_peeps_table.sql
+# Using the app
 
-### How to run the tests
+To run this app, start the server using the command
 
-## Set up the test database
+`$ rackup`
 
--Connect to psql
--Create the database using the psql command CREATE DATABASE chitter_test;
--Connect to the database using the pqsl command \c chitter_test;
--Run the query we have saved in the file 01_create_peeps_table.sql
+Navigate to http://localhost:9292/
+
 
 ## Approach
 
-So as to get some more practice making a fully CRUD app I decided to add update and delete functions to peeps. 
+- I used TDD throughout the development of this app working from the user stories provided.
+- So as to get some more practice making an app with a full selection of CRUD features I decided to add update and delete functions to peeps. 
+- I was keen to get some further practice using CSS and am pleased with the end result of the look of the app.
 
 # Features:
 -------
