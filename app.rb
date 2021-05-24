@@ -60,7 +60,7 @@ class ChitterChallenge < Sinatra::Base
       session[:id] = user.id
       redirect('/')
     else
-      flash[:notice] = 'Please check your username or password'
+      flash[:signin] = 'Please check your username or password'
       redirect('/sessions/new')
     end
   end

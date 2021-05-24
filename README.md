@@ -73,7 +73,7 @@ Screenshots of the app in use coming soon
 
 # Brief:
 
-This was the brief provided by Makers, including the user stories. All user stories have been implemented apart from the final one. I have made some changes to the notes on functionality, namely that users DO need to be logged in to read peeps. I made this change as I though this gave the app a more professional looking finish. As a bonus task I decided to work on the CSS to start with and hope to move onto enabling users to reply to peeps.
+This was the brief provided by Makers, including the user stories. All user stories have been implemented apart from the final one. I have made some changes to the notes on functionality, namely that users DO need to be logged in to read peeps and only user handles are displayed next to a users peep. I made these changes as I though they gave the app a more professional looking finish. As a bonus task I decided to work on the CSS to start with and hope to move onto enabling users to reply to peeps.
 
 ### User Stories
 

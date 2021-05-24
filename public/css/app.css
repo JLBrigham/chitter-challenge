@@ -47,7 +47,7 @@
 .registration-box {
     position: relative;
     top: 100px;
-    left: 390px;
+    left: 400px;
     height: 500px;
     width: 600px;
     border-radius: 8%;
@@ -91,6 +91,12 @@
     padding-left: 5px;
     position: relative;
     left: 225px;
+}
+
+.signin-flash {
+text-align: center;
+font-family: 'Advent Pro', sans-serif;
+position: fixed;
 }
 
 .start-session-button {
