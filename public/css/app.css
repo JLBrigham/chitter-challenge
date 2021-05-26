@@ -97,6 +97,7 @@
 text-align: center;
 font-family: 'Advent Pro', sans-serif;
 position: fixed;
+font-size: 30px;
 }
 
 .start-session-button {
@@ -120,7 +121,7 @@ position: fixed;
     position: relative;
     left: 330px;
     bottom: 20px;
-    background-color: #f1f1ef;;
+    background-color: #f1f1ef;
     border: none;
     font-family: 'Advent Pro', sans-serif;
     font-size: 50px;
@@ -152,4 +153,50 @@ body {
     padding: 0px; 
     outline: none;
     border: 0px;
+}
+
+.h1-div {
+    background-image: url('./images/white_terazzo.webp');
+    height: 150px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px; 
+    outline: none;
+    border: 0px;
+}
+
+.homepage-title {
+    font-family: 'Codystar', cursive;
+    font-size: 90px;
+    color: #889eb0;
+    padding-top: 30px;
+}
+
+.sign-out-button {
+    background-color: #d9bfb8;
+    border-radius: 5%;
+    border: none;
+    font-family: 'Advent Pro', sans-serif;
+    color: #889eb0;
+    font-size: 30px;
+    position: relative;
+    left: 90%;
+    bottom: 140px;
+}
+
+.sign-out-button:hover {
+    background-color: #f1f1ef;
+}
+
+.background {
+    background-color: #f1f1ef;
+    margin: 0px;
+    padding: 0px; 
+    outline: none;
+    border: 0px;
+}
+
+.welcome-title {
+    background-color: #f1f1ef;
+    margin: 0px;
 }

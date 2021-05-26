@@ -5,12 +5,18 @@
 </h2>
 <% end %>
 
-<% if @username != nil%>
-<h1>Welcome to Chitter <%= @username %> </h1>
 
+<% if @username != nil%>
+<div class="h1-div">
+<h1 class="homepage-title"> Chitter</h1>
 <form action="/sessions/destroy" method="post">
-  <input type="submit" value="Sign Out" />
+  <input class="sign-out-button" type="submit" value="Sign Out" />
 </form>
+</div>
+
+<h2 class ="welcome-title">Welcome <%= @username %> </h1>
+
+
 
 <form action="/peeps/new" method="post">
 <input type="text" name="peep" placeholder="Add your Peep here" />
@@ -33,6 +39,7 @@
     </li>
     <% end %>
     </ul>
+    
 
 <% else %>
 <div class="index-box">
