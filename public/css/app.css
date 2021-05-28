@@ -153,6 +153,7 @@ body {
     padding: 0px; 
     outline: none;
     border: 0px;
+    background-color: #f1f1ef;
 }
 
 .h1-div {
@@ -167,7 +168,7 @@ body {
 
 .homepage-title {
     font-family: 'Codystar', cursive;
-    font-size: 90px;
+    font-size: 95px;
     color: #889eb0;
     padding-top: 30px;
 }
@@ -199,4 +200,39 @@ body {
 .welcome-title {
     background-color: #f1f1ef;
     margin: 0px;
+    font-family: 'Advent Pro', sans-serif;
+    text-align: center;
+    font-size: 40px;
+    color: #889eb0;
+
+}
+
+.add-peep-form {
+    background-color: #f1f1ef;
+    margin: 0px;
+}
+
+.peep-list {
+    list-style-type: none;
+    display:inline-block;
+    border:1px solid #9fbfc2;
+    border-radius: 5%;
+    padding: 40px;
+    background-color: #9fbfc2;
+    font-family: 'Advent Pro', sans-serif;
+    color: #f1f1ef;
+    position: relative;
+    left: 750px;
+    font-size: 25px;
+    font-weight: 100;
+    height: 300px;
+    overflow: scroll;
+}
+
+.background-div {
+    background-color: #f1f1ef;
+    margin: 0px;
+    padding: 0px; 
+    outline: none;
+    border: 0px;
 }

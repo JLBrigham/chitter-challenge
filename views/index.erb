@@ -14,19 +14,20 @@
 </form>
 </div>
 
-<h2 class ="welcome-title">Welcome <%= @username %> </h1>
+<h2 class ="welcome-title">Welcome <%= @username %> </h2>
 
 
 
-<form action="/peeps/new" method="post">
+<form class="add-peep-form" action="/peeps/new" method="post">
 <input type="text" name="peep" placeholder="Add your Peep here" />
 <input type="submit" value="Add Peep" />
 </form>
 
-<ul> 
+<div class="background-div">
+<ul class="peep-list"> 
 <% @peeps.each do |peep| %>
     <li class="peep" id="peep-<%= peep.id %>">
-    <%= peep.name %> <%= peep.username %> "<%= peep.peep%>" <%= peep.time %>
+    @<%= peep.username %> "<%= peep.peep%>" <%= peep.time %>
     <% if peep.username == @username %>
     <form action="/<%= peep.id %>" method="post">
     <input type='hidden' name='_method' value='DELETE' />
@@ -39,7 +40,7 @@
     </li>
     <% end %>
     </ul>
-    
+    </div>
 
 <% else %>
 <div class="index-box">
