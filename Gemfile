@@ -5,7 +5,6 @@ gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'sinatra-flash', '~> 0.3.0'
 gem 'bcrypt'
-gem 'rake'
 
 group :test do
   gem 'capybara'

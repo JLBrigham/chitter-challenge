@@ -1,238 +1,243 @@
 .title {
-    color: #889eb0;
-    text-align: center;
-    font-family: 'Codystar', cursive;
-    font-size: 110px;
-    padding-top: 50px;
-    
+  color: #889eb0;
+  text-align: center;
+  font-family: "Codystar", cursive;
+  font-size: 110px;
+  padding-top: 50px;
 }
 
 .title-on-sign-up {
-    color: #889eb0;
-    text-align: center;
-    font-family: 'Codystar', cursive;
-    font-size: 110px;
-    padding-top: 50px;
-    margin-bottom: 20px;
+  color: #889eb0;
+  text-align: center;
+  font-family: "Codystar", cursive;
+  font-size: 110px;
+  padding-top: 50px;
+  margin-bottom: 20px;
 }
 /* font-family: 'Advent Pro', sans-serif; */
 
 .sign-up-input {
-    padding-bottom: 10px;
-    padding-top: 10px;
-    padding-left: 5px;
-    margin: 5px;
-    position: relative;
-    left: 130px;
-    border: none; 
-    outline: none;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 5px;
+  margin: 5px;
+  position: relative;
+  left: 130px;
+  border: none;
+  outline: none;
 }
 
 .index-box {
-    background-image: url('./images/white_terazzo.webp');
-    height: 100%;
-    width: 100%; 
-    margin-top: 0px;
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  background-image: url("./images/white_terazzo.webp");
+  height: 100%;
+  width: 100%;
+  margin-top: 0px;
 }
 
 .create-account-header {
-    font-family: 'Advent Pro', sans-serif;
-    color: #889eb0;
-    text-align: center;
-    margin-top: 10px;
-    font-size: 30px;
+  font-family: "Advent Pro", sans-serif;
+  color: #889eb0;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 30px;
 }
 
 .registration-box {
-    position: relative;
-    top: 100px;
-    left: 400px;
-    height: 500px;
-    width: 600px;
-    border-radius: 8%;
-    background-color: #f1f1ef;
+  /* position: relative;
+  top: 100px;
+  left: 400px; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; */
+  height: 500px;
+  width: 600px;
+  border-radius: 8%;
+  background-color: #f1f1ef;
 }
 
 .submit-button {
-    background-color:   #d9bfb8;
-    border: none;
-    font-family: 'Advent Pro', sans-serif;
-    font-size: 50px;
-    /* color: #889eb0; */
-    color: #f1f1ef;
-    position: relative;
-    left: 320px;
-    bottom: 140px;
+  background-color: #d9bfb8;
+  border: none;
+  font-family: "Advent Pro", sans-serif;
+  font-size: 50px;
+  /* color: #889eb0; */
+  color: #f1f1ef;
+  position: relative;
+  left: 320px;
+  bottom: 140px;
 }
 
 .sign-in-button {
-    position: relative;
-    bottom: 100px;
-    left: 100px;
-    background-color:  #f1f1ef;
-    border: none;
-    font-family: 'Advent Pro', sans-serif;
-    font-size: 50px;
-    color: #889eb0;
+  position: relative;
+  bottom: 100px;
+  left: 100px;
+  background-color: #f1f1ef;
+  border: none;
+  font-family: "Advent Pro", sans-serif;
+  font-size: 50px;
+  color: #889eb0;
 }
 
 .submit-button:hover {
-    background-color: #d9bfb8;
-    border-radius: 5%;
-    color: #889eb0;
+  background-color: #d9bfb8;
+  border-radius: 5%;
+  color: #889eb0;
 }
 
 .sign-in-input {
-    border: none; 
-    outline: none;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    padding-left: 5px;
-    position: relative;
-    left: 225px;
+  border: none;
+  outline: none;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 5px;
+  position: relative;
+  left: 225px;
 }
 
 .signin-flash {
-text-align: center;
-font-family: 'Advent Pro', sans-serif;
-position: fixed;
-font-size: 30px;
+  text-align: center;
+  font-family: "Advent Pro", sans-serif;
+  position: fixed;
+  font-size: 30px;
 }
 
 .start-session-button {
-    background-color:  #f1f1ef;
-    border: none;
-    font-family: 'Advent Pro', sans-serif;
-    font-size: 50px;
-    color: #889eb0;
-    position: relative;
-    top: 100px;
-    left: 20px;
+  background-color: #f1f1ef;
+  border: none;
+  font-family: "Advent Pro", sans-serif;
+  font-size: 50px;
+  color: #889eb0;
+  position: relative;
+  top: 100px;
+  left: 20px;
 }
 
 .start-session-button:hover {
-    background-color: #d9bfb8;
-    border-radius: 5%;
-    color: #889eb0;
+  background-color: #d9bfb8;
+  border-radius: 5%;
+  color: #889eb0;
 }
 
 .sign-up-button {
-    position: relative;
-    left: 330px;
-    bottom: 20px;
-    background-color: #f1f1ef;
-    border: none;
-    font-family: 'Advent Pro', sans-serif;
-    font-size: 50px;
-    color: #889eb0;
+  position: relative;
+  left: 330px;
+  bottom: 20px;
+  background-color: #f1f1ef;
+  border: none;
+  font-family: "Advent Pro", sans-serif;
+  font-size: 50px;
+  color: #889eb0;
 }
 
 .sign-in-button:hover {
-    background-color: #d9bfb8;
-    border-radius: 5%;
+  background-color: #d9bfb8;
+  border-radius: 5%;
 }
 
 .sign-up-button:hover {
-    background-color: #d9bfb8;
-    border-radius: 5%;
+  background-color: #d9bfb8;
+  border-radius: 5%;
 }
 
 .opening-text {
-    font-family: 'Advent Pro', sans-serif;
-    text-align: center;
-    color: #889eb0;
-    font-size: 30px;
-    position: relative;
-    bottom: 45px;
-
+  font-family: "Advent Pro", sans-serif;
+  text-align: center;
+  color: #889eb0;
+  font-size: 30px;
+  position: relative;
+  bottom: 45px;
 }
 
 body {
-    margin: 0px;
-    padding: 0px; 
-    outline: none;
-    border: 0px;
-    background-color: #f1f1ef;
+  margin: 0px;
+  padding: 0px;
+  outline: none;
+  border: 0px;
+  background-color: #f1f1ef;
 }
 
 .h1-div {
-    background-image: url('./images/white_terazzo.webp');
-    height: 150px;
-    width: 100%;
-    margin: 0px;
-    padding: 0px; 
-    outline: none;
-    border: 0px;
+  background-image: url("./images/white_terazzo.webp");
+  height: 150px;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  outline: none;
+  border: 0px;
 }
 
 .homepage-title {
-    font-family: 'Codystar', cursive;
-    font-size: 95px;
-    color: #889eb0;
-    padding-top: 30px;
+  font-family: "Codystar", cursive;
+  font-size: 95px;
+  color: #889eb0;
+  padding-top: 30px;
 }
 
 .sign-out-button {
-    background-color: #d9bfb8;
-    border-radius: 5%;
-    border: none;
-    font-family: 'Advent Pro', sans-serif;
-    color: #889eb0;
-    font-size: 30px;
-    position: relative;
-    left: 90%;
-    bottom: 140px;
+  background-color: #d9bfb8;
+  border-radius: 5%;
+  border: none;
+  font-family: "Advent Pro", sans-serif;
+  color: #889eb0;
+  font-size: 30px;
+  position: relative;
+  left: 90%;
+  bottom: 140px;
 }
 
 .sign-out-button:hover {
-    background-color: #f1f1ef;
+  background-color: #f1f1ef;
 }
 
 .background {
-    background-color: #f1f1ef;
-    margin: 0px;
-    padding: 0px; 
-    outline: none;
-    border: 0px;
+  background-color: #f1f1ef;
+  margin: 0px;
+  padding: 0px;
+  outline: none;
+  border: 0px;
 }
 
 .welcome-title {
-    background-color: #f1f1ef;
-    margin: 0px;
-    font-family: 'Advent Pro', sans-serif;
-    text-align: center;
-    font-size: 40px;
-    color: #889eb0;
-
+  background-color: #f1f1ef;
+  margin: 0px;
+  font-family: "Advent Pro", sans-serif;
+  text-align: center;
+  font-size: 40px;
+  color: #889eb0;
 }
 
 .add-peep-form {
-    background-color: #f1f1ef;
-    margin: 0px;
+  background-color: #f1f1ef;
+  margin: 0px;
 }
 
 .peep-list {
-    list-style-type: none;
-    display:inline-block;
-    border:1px solid #9fbfc2;
-    border-radius: 5%;
-    padding: 40px;
-    background-color: #9fbfc2;
-    font-family: 'Advent Pro', sans-serif;
-    color: #f1f1ef;
-    position: relative;
-    left: 750px;
-    font-size: 25px;
-    font-weight: 100;
-    height: 300px;
-    overflow: scroll;
+  list-style-type: none;
+  display: inline-block;
+  border: 1px solid #9fbfc2;
+  border-radius: 5%;
+  padding: 40px;
+  background-color: #9fbfc2;
+  font-family: "Advent Pro", sans-serif;
+  color: #f1f1ef;
+  position: relative;
+  left: 750px;
+  font-size: 25px;
+  font-weight: 100;
+  height: 300px;
+  overflow: scroll;
 }
 
 .background-div {
-    background-color: #f1f1ef;
-    margin: 0px;
-    padding: 0px; 
-    outline: none;
-    border: 0px;
+  background-color: #f1f1ef;
+  margin: 0px;
+  padding: 0px;
+  outline: none;
+  border: 0px;
 }
